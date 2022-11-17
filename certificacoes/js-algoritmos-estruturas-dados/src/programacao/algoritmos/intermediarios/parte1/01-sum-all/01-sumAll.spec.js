@@ -1,6 +1,6 @@
 const { sumAll } = require('./01-sumAll.js');
 
-test('um número', () => {
+test('Deve retornar um número', () => {
   expect(typeof sumAll([1, 4])).toEqual('number');
 })
 describe('Deve retornar a soma de um intervalo de números', () => {

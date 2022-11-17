@@ -7,7 +7,9 @@
  */
 function sumAll(arr) {
   //do meu jeito Limitava a quantidade de dados passados metodo .sort()
-  //leti arrayOrdenado = arr.sort((a, b) => a - b); 
+  //letarrayOrdenado = arr.sort((a, b) => a - b);
+  //letmenorNumero = arrayOrdenado[0]; 
+  //letmaiorNumero = arrayOrdenado[arrayOrdenado.length -1];  
   let soma = 0;
   //tecnica obtida da 3ª solução do site Math.min() e .max() com desestruturação.
   for (let i = Math.min(...arr); i <= Math.max(...arr); i++) {
