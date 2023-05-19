@@ -1,6 +1,6 @@
 //NÃO CONSEGUI RESOLVER.
 //Minha versão VEM da 2ª solução do site.
-function maioresNumerosArrays(arr) {
+function maiorNumeroCadaArrayDentroArray(arr) {
   return arr.map(a => {
     return a.reduce((anterior, atual) => {
       return Math.max(anterior, atual)
@@ -44,7 +44,9 @@ function largestOfFour4(arr, finalArr = []) {
     : largestOfFour4(arr.slice(1), finalArr.concat(Math.max(...arr[0])))
 }
 
-//>>>>>>> Benchmark by @P1xt
+/* ==================================================
+                  Benchmark by @P1xt
+ ================================================== */
 
 //solução mais rapida e eficiente segundo o benchmark
 function largestOfFourVanilla(arr) {
@@ -60,9 +62,10 @@ function largestOfFourES6(arr) {
 function largestOfFourBind(arr) {
   return arr.map(Function.apply.bind(Math.max, null));
 }
-//Benchmark by @P1xt <<<<<<<<
+/* ================================================== */
 
 module.exports = {
-  maioresNumerosArrays,
-  largestOfFourES6
+  maiorNumeroCadaArrayDentroArray,
+  largestOfFourES6,
+  largestOfFour4
 };

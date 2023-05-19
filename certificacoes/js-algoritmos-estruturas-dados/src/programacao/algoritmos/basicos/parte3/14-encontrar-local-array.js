@@ -1,7 +1,8 @@
 function encontrarIndexParaInserir(arr, num){
-  arr.splice(0, 0, num);
-  arr.sort((a, b) => a - b );
-  return arr.indexOf(num);
+  let copiaArr = [...arr]; // fazer operações em uma copia do array.
+  copiaArr.splice(0, 0, num); // splice modifica o array original.
+  copiaArr.sort((a, b) => a - b );
+  return copiaArr.indexOf(num);
 }
 
 //1ª solução do site.
@@ -31,7 +32,7 @@ function getIndexToIns3(arr, num) {
 //4ª solução do site. Parecido com a minha.
 function getIndexToIns4(arr, num) {
   return arr
-    .concat(num)
+    .concat(num) // não modifica o array original.
     .sort((a, b) => a - b)
     .indexOf(num);
 }

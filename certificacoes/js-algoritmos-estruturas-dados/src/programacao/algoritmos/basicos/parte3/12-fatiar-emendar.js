@@ -17,7 +17,7 @@ function frankenSplice1(arr1, arr2, n) {
 
 //2ª solução do site. igual a minha.
 
-//3ª solução do site. Utilizando ATRIBUIÇÃO DE DESSETRUTURAÇÃO.
+//3ª solução do site. Utilizando ATRIBUIÇÃO VIA DESSETRUTURAÇÃO.
 function frankenSplice3(arr1, arr2, n) { 
   return [...arr2.slice(0, n), ...arr1, ...arr2.slice(n)];
 }

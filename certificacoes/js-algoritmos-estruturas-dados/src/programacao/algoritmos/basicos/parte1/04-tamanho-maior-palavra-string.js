@@ -60,7 +60,7 @@ function findLongestWordLength5(str) {
     // and recursively call the function
     return Math.max(
       words[0].length,
-      findLongestWordLength(words.slice(1).join(" "))
+      findLongestWordLength5(words.slice(1).join(" "))
     );
   }
   

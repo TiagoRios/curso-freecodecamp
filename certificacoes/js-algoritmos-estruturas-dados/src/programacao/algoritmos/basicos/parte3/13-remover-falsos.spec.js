@@ -21,5 +21,6 @@ test('Deve retornar array sem elementos falsos', () => {
     expect(removerFalsos(arrComTrueFalse2)).toEqual([1, 2]);
 });
 test('Array original deve permanecer o mesmo', () => {
+    removerFalsos(arrComTrueFalse);
     expect(arrComTrueFalse).toEqual(arrComTrueFalse);
 });

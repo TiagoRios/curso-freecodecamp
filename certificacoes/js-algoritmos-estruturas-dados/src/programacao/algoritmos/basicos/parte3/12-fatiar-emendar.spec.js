@@ -16,7 +16,9 @@ test('Deve retornar o array na ordem original', () => {
     expect(fatiarEmendar([1, 2, 3, 4], [], 0)).toEqual([1, 2, 3, 4]);
 });
 test('Arrays originais não devem ser modificados', () => {
+    let copiaArray1 = [...arr1];
+    let copiaArray2 = [...arr2];
     fatiarEmendar(arr1, arr2, 1)
-    expect(arr1).toEqual(arr1);
-    expect(arr2).toEqual(arr2);
+    expect(arr1).toEqual(copiaArray1);
+    expect(arr2).toEqual(copiaArray2);
 });

@@ -18,7 +18,7 @@ describe('passaro com herança', () => {
     expect(passaroHeranca.constructor !== PassaroHeranca).toBe(true);
   });
   test('Deve ter constructor diferente de Animal', () => {
-    expect(PassaroHeranca.constructor !== Animal).toBe(true);
+    expect(PassaroHeranca.constructor != Animal).toBe(true);
   });
   test('Deve ter constructor igual a PassaroHeranca', () => {
     expect(PassaroHeranca.constructor === PassaroHeranca).toBe(true);

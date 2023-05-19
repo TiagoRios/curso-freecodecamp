@@ -1,10 +1,10 @@
 const { encontrarIndexParaInserir } = require('./14-encontrar-local-array.js');
 
 test('Deve retornar um número', () => {
-    expect(typeof encontrarIndexParaInserir([10, 20, 30, 40, 50], 35)).toBe('number');
+    expect(typeof encontrarIndexParaInserir([50, 20, 40, 10, 30], 35)).toBe('number');
 });
 test('Deve retornar 3', () => {
-    expect(encontrarIndexParaInserir([10, 20, 30, 40, 50], 35)).toEqual(3);
+    expect(encontrarIndexParaInserir([50, 20, 40, 10, 30], 35)).toEqual(3);
 });
 test('Deve retornar 2 depois de ordenado', () => {
     expect(encontrarIndexParaInserir([5, 3, 20, 3], 5)).toEqual(2);

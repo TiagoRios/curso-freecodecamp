@@ -1,3 +1,10 @@
+/**
+ * Retorna o primeiro elemento que corresponde ou retorno da função de callback.
+ * 
+ * @param {Array} arr 
+ * @param {Function} funcao 
+ * @returns 
+ */
 function encontrarElemento(arr, funcao){
   for (const element of arr){
     if(funcao(element)){
