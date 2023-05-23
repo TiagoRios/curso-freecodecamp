@@ -16,7 +16,7 @@ describe('Deve retornar a soma de um intervalo de números', () => {
   test('Ordem decrescente', () => {
     expect(sumAll([10, 5])).toEqual(45);
   })
-  test('Array com mais de dois nmeros', () => {
-    expect(sumAll([10, 5, 7, 8])).toEqual(45);
+  test('Array com mais de dois numeros', () => {
+    expect(sumAll([10, 8, 5, 7])).toEqual(45);
   })
 })

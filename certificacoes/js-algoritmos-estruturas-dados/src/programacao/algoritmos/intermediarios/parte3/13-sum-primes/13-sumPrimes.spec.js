@@ -1,4 +1,4 @@
-const { sumPrimes } = require('./13-sum-primes.js')
+const { sumPrimes } = require('./13-sumPrimes.js')
 
 test('Deve retornar um número', () => {
   expect(typeof sumPrimes(1))

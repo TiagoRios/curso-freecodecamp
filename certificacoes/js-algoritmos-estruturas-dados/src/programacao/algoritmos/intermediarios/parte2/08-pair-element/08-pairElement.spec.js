@@ -1,4 +1,4 @@
-const { pairElement } = require('./08-pair-element.js')
+const { pairElement } = require('./08-pairElement.js')
 
   test('Deve retornar DNA pareado', () => {
     expect(pairElement("ATCGA"))

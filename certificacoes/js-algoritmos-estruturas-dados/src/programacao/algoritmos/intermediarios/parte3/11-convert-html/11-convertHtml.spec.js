@@ -1,4 +1,4 @@
-const { convertHTML } = require('./11-convert-html.js')
+const { convertHTML } = require('./11-convertHtml.js')
 
   test('Deve retornar String Dolce &amp; Gabbana', () => {
     expect(convertHTML("Dolce & Gabbana"))

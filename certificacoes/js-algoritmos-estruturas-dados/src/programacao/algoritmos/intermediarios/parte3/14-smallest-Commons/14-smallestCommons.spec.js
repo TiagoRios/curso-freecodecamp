@@ -1,4 +1,4 @@
-const { smallestCommons } = require('./14-smallest-Commons')
+const { smallestCommons } = require('./14-smallestCommons')
 
 test('Deve retornar um número', () => {
   expect(typeof smallestCommons([1, 5]))

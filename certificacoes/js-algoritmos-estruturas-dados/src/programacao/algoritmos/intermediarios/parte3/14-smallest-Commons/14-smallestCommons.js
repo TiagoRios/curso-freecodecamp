@@ -1,36 +1,39 @@
 /**
  * Função que retorna o MMC (Minimo multiplo comum) de um intervalo de números.
  * 
+ * Por exemplo, se forem dados 1 e 3, encontre o menor múltiplo comum de 1 e 3 
+ * que também é divisível por todos os números entre 1 e 3. A resposta aqui seria 6.
+ * 
  * exemplo: MMC[1,3] = qual número é divisível por 1, 2 e 3.
- * @param arr Array com a faixa de números fornecido.
- * @returns um inteiro com o valor do MMC.
+ * @param {numnber[]} arr Array com a faixa de números fornecido.
+ * @returns number com o MMC.
  */
 
 //Está solução não passa no site. potêncial infinito.
 //Aqui funciona.
 //Solução ruim. muitos ciclos de processamento.
 function smallestCommonsRuim(arr) {
-  let arrayOrdenado = arr.sort((a, b) => a - b);
+  let arrayOrdenado = [...arr].sort((a, b) => a - b);
   let menorNumero = arrayOrdenado[0];
   let maiorNumero = arrayOrdenado[arrayOrdenado.length - 1];
-  let a = 0;
+  let valorRetorno = 0;
 
-  let i = maiorNumero;
-  while ( i > a) {
-    if (a == (i - 1)) {
-      return a;
+  let maiorTemporario = maiorNumero;
+  while (maiorTemporario > valorRetorno) { // potêncial infinito.
+    if (valorRetorno == (maiorTemporario - 1)) {
+      return valorRetorno; 
     }
     for (let j = menorNumero; j <= maiorNumero; j++) {
-      if (i % j == 0 && i % maiorNumero == 0) {
-        a = i;
+      if (maiorTemporario % j == 0 && maiorTemporario % maiorNumero == 0) {
+        valorRetorno = maiorTemporario;
       } else {
-        a = 0;
+        valorRetorno = 0;
         break;
       }
     } //for
-    i++;
+    maiorTemporario++;
   } //while
-  return a;
+  return valorRetorno;
 }
 
 // 1ª solução do site. Looping approach
@@ -150,5 +153,5 @@ function getPrimeFactors(num) {
 // console log(smallestCommons([18, 23]));
 
 module.exports = {
-  smallestCommons
+  smallestCommons: smallestCommonsRuim
 }

@@ -1,4 +1,4 @@
-const { translatePigLatin } = require('./05-translatePigLatin.js');
+const { translatePigLatin } = require('./06-translatePigLatin.js');
 
 describe('Deve traduzir para o Pig Latin e retornar', () => {
   test('String aliforniacay', () => {

@@ -2,11 +2,11 @@
  * Função que realiza o somatório de uma faixa de números.
  * Não importa a ordem do maior.
  * 
- * @param arr Array contendo dois números.  
- * @returns somatórios da faixa dos dois números.
+ * @param {Array} arr Array contendo dois números.  
+ * @returns {number} somatórios da faixa dos dois números.
  */
 function sumAll(arr) {
-  let arrayOrdenado = arr.sort((a, b) => a - b);
+  let arrayOrdenado = [...arr].sort((a, b) => a - b);
   let menorNumero = arrayOrdenado[0];
   let maiorNumero = arrayOrdenado[arrayOrdenado.length - 1]; //Obtenho valor do último elemento  
   let soma = 0;
@@ -16,16 +16,13 @@ function sumAll(arr) {
   return soma;
 }
 
-/****************************************
-            
-             Outras soluções
-
- ****************************************/
+/* ==================================================
+                    Outras soluções
+   ================================================== */
 
 //1ª solução do site.
-sumAll([1, 4]);
 function sumAll1(arr) {
-  let max = Math.max(arr[0], arr[1]);
+  let max = Math.max(arr[0], arr[1]); 
   let min = Math.min(arr[0], arr[1]);
   let sumBetween = 0;
   for (let i = min; i <= max; i++) {
@@ -35,7 +32,6 @@ function sumAll1(arr) {
 }
 
 //2ª solução do site. que sacada massa - usando soma de PA.
-sumAll([1, 4]);
 const sumAll2 = arr => {
   // Buckle up everything to one!
   const startNum = arr[0];
@@ -50,10 +46,9 @@ const sumAll2 = arr => {
   return sum;
 };
 
-//3ª solução do site.
+//3ª solução do site. Passa no teste quando array tem mais de 2 elementos.
 function sumAll3(arr) {
   let soma = 0;
-  //tecnica obtida da 3ª solução do site Math.min() e .max() com desestruturação.
   for (let i = Math.min(...arr); i <= Math.max(...arr); i++) {
     soma += i;
   }

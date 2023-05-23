@@ -3,19 +3,18 @@
  * 
  * Não modifica o Array orginal.
  * 
- * @param {*} arr Array a ser pesquisado. 
- * @returns Array depois de removido os valores extras.
+ * @param {Array} arr Array a ser pesquisado. 
+ * @returns Array com elementos já removidos.
  */
 function destroyer(arr) {
-  let remover = Object.values(arguments).slice(1)
-  return arr.filter(a => remover.indexOf(a) === -1)
+  const arrArguments = Object.values(arguments).slice(1)
+  // filtra elementos de arr que não estão no "arrArguments"
+  return arr.filter(a => arrArguments.indexOf(a) === -1)
 }
 
-/****************************************
-            
-             Outras soluções
-
- ****************************************/
+/* ==================================================
+                    Outras soluções
+   ================================================== */
 
 //1ª solução do site. Nem compensa. Muito verbosa e difícil de manter
 //2ª solução do site. Parecida com a minha.
@@ -32,5 +31,5 @@ function destroyer3(arr, ...valsToRemove) {
 }
 
 module.exports = {
-  destroyer
+  destroyer : destroyer3
 }

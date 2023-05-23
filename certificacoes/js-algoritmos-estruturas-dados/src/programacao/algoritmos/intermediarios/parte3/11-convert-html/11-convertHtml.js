@@ -1,8 +1,8 @@
 /**
  * Função que retorna uma String convertendo para caracteres de entidades.
  * 
- * @param str String que será convertida para funcionar em HTML 
- * @returns String com as mudanças
+ * @param {String} str String que será convertida para funcionar em HTML 
+ * @returns {String} String com as mudanças
  */
  function convertHTML(str) {
   let arrayChar = str.split("");
@@ -21,6 +21,10 @@
   }
   return arrayChar.join("");
 }
+
+/* ==================================================
+                    Outras soluções
+   ================================================== */
 
 //1ª Solução do site.
 function convertHTML1(str) {
@@ -44,8 +48,8 @@ function convertHTML1(str) {
         break;
     }
   }
-  temp = temp.join("");
-  return temp;
+  
+  return temp.join("");
 }
 
 //2ª Solução do site.
@@ -57,7 +61,7 @@ function convertHTML2(str) {
     '"': "&quot;",
     "'": "&apos;"
   };
-  return str.replace(/([&<>\"'])/g, match => htmlEntities[match]);
+  return str.replace(/([&<>"'])/g, match => htmlEntities[match]);
 }
 
 //3ª Solução do site.

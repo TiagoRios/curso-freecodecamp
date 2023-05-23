@@ -2,7 +2,7 @@
  * Função que soma os números impares do fibonacci
  * Menor ou igual ao número fornecido.
  * 
- * @param num Número final da sequência fibonacci.
+ * @param {number} num tamanho da sequência fibonacci.
  * @returns soma dos números impares.
  */
 //1ª Solução do site.
@@ -25,7 +25,7 @@ function sumFibonacci(num) {
 //Retorna array com fibonacci's
 function fibonacci(num) {
   if (num < 1)
-    return 0;
+    return [];
 
   let prevNumber = 0;
   let currNumber = 1;
@@ -41,7 +41,7 @@ function fibonacci(num) {
   return arr;
 }
 
-//2ª Solução do site. Difícil de manutenção.
+//2ª Solução do site.
 function sumFibs2(num) {
   // Perform checks for the validity of the input
   if (num <= 0) return 0;

@@ -5,8 +5,8 @@
  * Se a palavra inicia com vogal o seu final é acrescentado 'way'.
  * Se a palavra inicia com consoante o seu final e acrescentado 'ay'
  * 
- * @param {*} str string que será traduzida.
- * @returns Uma string contendo tradução
+ * @param {Array} str string que será traduzida.
+ * @returns {String} Uma string contendo tradução
  */
 
 //Díficil de realizar manutenção. Pensar em outras soluções performática.
@@ -31,6 +31,10 @@ function translatePigLatin(str) {
   arr.push('ay'); // caso não possuir vogais na palavra
   return arr.join('')
 }
+
+/* ==================================================
+                    Outras soluções
+   ================================================== */
 
 //Variação da 1ª solução do site. sem ternário.
 function translatePigLatinVariacaoSolucao1(str) {
@@ -85,7 +89,7 @@ function translatePigLatin3(str) {
   const conjuntoConsoantes = str.match(/^[^aeiou]+/)[0]; //se 3 consoantes.
   return str
     .substring(conjuntoConsoantes.length) //então começo substring na posição 3. Sem as consoantes.
-    + conjuntoConsoantes + "ay"; //coloca as consoantes no fim
+    + conjuntoConsoantes + "ay"; //coloca as consoante(s) no fim mais "ay";
 }
 
 //4ª solução do site.

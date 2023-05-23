@@ -1,4 +1,4 @@
-const { sumFibonacci } = require('./12-sum-fibonacci.js')
+const { sumFibonacci } = require('./12-sumFibonacci.js')
 
   test('Deve retornar um número', () => {
     expect(typeof sumFibonacci(1))

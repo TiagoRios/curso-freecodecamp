@@ -1,4 +1,4 @@
-const { myReplace } = require('./07-my-replace.js');
+const { myReplace } = require('./07-myReplace.js');
 
 describe('Deve procurar e substituir', () => {
   test('"store" por "mail" - Retornar string: Let us go to the mall', () => {

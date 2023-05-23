@@ -8,8 +8,8 @@
  * Sempre T com A e vice-versa
  * Sempre G com C e vice-versa
  * 
- * @param str sequência do DNA que tenho que parear.
- * @returns Array de arrays com elementos do DNA pareados.
+ * @param {String} str sequência do DNA que tenho que parear.
+ * @returns {string[]} Array de arrays com elementos do DNA pareados.
  */
 function pairElement(str) {
   let arrTotal = [];
@@ -29,6 +29,10 @@ function pairElement(str) {
   }
   return arrTotal;
 }
+
+/* ==================================================
+                    Outras soluções
+   ================================================== */
 
 // 1ª solução do site.
 function pairElement1(str) {

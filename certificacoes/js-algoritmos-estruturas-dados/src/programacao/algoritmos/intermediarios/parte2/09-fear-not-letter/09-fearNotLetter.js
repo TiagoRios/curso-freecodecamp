@@ -1,15 +1,14 @@
 /**
- * Função que retorna a letra que falta em uma sequência.
+ * Função que retorna a primeira letra que falta em uma sequência.
  * 
- * @param str String que contém a sequência de letras
- * @returns String da letra que falta;
+ * @param {String} str String que contém a sequência de letras
+ * @returns {String} String da letra que falta ou undefined;
  */
 //1ª solução do site.
-function fearNotLetter(str) {
+function fearNotLetter1(str) {
   for (let i = 0; i < str.length; i++) {
-    const charCode = str.charCodeAt(i);
-    if (charCode !== str.charCodeAt(0) + i) {
-      return String.fromCharCode(charCode - 1);
+    if (str.charCodeAt(i) !== str.charCodeAt(0) + i) {
+      return String.fromCharCode(str.charCodeAt(i - 1) + 1);
     }
   }
   return undefined;
@@ -19,7 +18,7 @@ function fearNotLetter(str) {
 function fearNotLetter2(str) {
   let currCharCode = str.charCodeAt(0);
   let missing = undefined;
-  
+
   str
     .split("")
     .forEach(letter => {
@@ -34,14 +33,17 @@ function fearNotLetter2(str) {
 }
 
 //3ª solução do site.
-function fearNotLette3(str) {
+function fearNotLetter3(str) {
   for (let i = 0; i < str.length; ++i) {
     if (str.charCodeAt(i + 1) - str.charCodeAt(i) > 1) {//diferença de codigos maior que 1.
       return String.fromCharCode(str.charCodeAt(i) + 1);
     }
   }
+  return undefined;
 }
 
 module.exports = {
-  fearNotLetter
+  fearNotLetter: fearNotLetter1,
+  fearNotLetter2,
+  fearNotLetter3
 }

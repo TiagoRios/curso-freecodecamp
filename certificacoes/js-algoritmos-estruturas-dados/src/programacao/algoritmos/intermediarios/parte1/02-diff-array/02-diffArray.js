@@ -1,13 +1,13 @@
 //Minha solução utilizava 2 loops for. Um horror só de pensar.
 //Solução refatorada e é parecida com a solução 1.
 
-//O temop de processamento das funções e variações devem analizadas com cautela.
+//O tempo de processamento das funções e variações devem analizadas com cautela.
 
 /**
  * Função que devolve a diferença simetrica entre dois arrays.
  * 
- * @param {*} arr1 Primeiro array para comparar
- * @param {*} arr2 Segundo array para comparar
+ * @param {Array} arr1 Primeiro array para comparar
+ * @param {Array} arr2 Segundo array para comparar
  * @returns Array com os elementos não presentes no outro array 
  */
 //1ª solução do site - Melhorada.
@@ -24,11 +24,9 @@ function diffArray(arr1, arr2) {
   return newArr;
 }
 
-/****************************************
-            
-             Outras soluções
-
- ****************************************/
+/* ==================================================
+                    Outras soluções
+   ================================================== */
 
 //2ª solução do site.
 function diffArray2(arr1, arr2) {

@@ -8,8 +8,8 @@
 /**
  * Função que localiza objetos no Array de objetos.
  * 
- * @param collection Array com objetos
- * @param source Objeto(s) procurado(s).
+ * @param {Iterable} collection Array com objetos
+ * @param {Object} source Objeto(s) procurado(s).
  * @returns array com objeto(s) localizado(s).
  */
 
@@ -25,11 +25,9 @@ function whatIsInAName(collection, source) {
   return arr;
 }
 
-/****************************************
-            
-             Outras soluções
-
- ****************************************/
+/* ==================================================
+                    Outras soluções
+   ================================================== */
 
 //Parcial DECLARATIVA/IMPERATIVO
 //1ª solução do site. FILTER.
@@ -44,7 +42,7 @@ function whatIsInAName1(collection, source) {
         return false;
       }
     }
-    return true; // filter
+    return true; //para o filter
   });
 }
 

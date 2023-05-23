@@ -3,10 +3,10 @@
  * 
  * Se a string original estiver capitalizada, a substituta também deve ser. e vice-versa.
  * 
- * @param str Frase que será feita a busca.
- * @param before string procurada para substituir.
- * @param after string que substituirá a procura.
- * @returns Uma nova string com a substituição.
+ * @param {String} str Frase que será feita a busca.
+ * @param {String} before string procurada para substituir.
+ * @param {String} after string que substituirá a procura.
+ * @returns String com a substituição.
  */
 function myReplace(str, before, after) {
   if (before[0].match(/[a-z]/)) {
@@ -16,6 +16,10 @@ function myReplace(str, before, after) {
   }
   return str.replace(before, after);
 }
+
+/* ==================================================
+                    Outras soluções
+   ================================================== */
 
 //1ª solução do site. Parecida com a minha. utiliza
 function myReplace1(str, before, after) {
@@ -119,17 +123,11 @@ function myReplace5(str, before, after) {
     ? after[0].toUpperCase() + after.slice(1)
     : after[0].toLowerCase() + after.slice(1);
   return strArr
-    .map(item => (item === before 
+    .map(item => (item === before
       ? replacement //substitui se o elemento é igual ao pesquisado. 
       : item)) //Senão não altera o elemento no array.
     .join(" ");//transforma o Array em uma string novamente.
 }
-
-// test:
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
-
-// test here
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
 
 module.exports = {
   myReplace

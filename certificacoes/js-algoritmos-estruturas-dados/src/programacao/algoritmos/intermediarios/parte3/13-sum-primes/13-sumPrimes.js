@@ -1,7 +1,7 @@
 /**
  * Função retorna a soma dos números primos.
  * 
- * @param num até qual número sera feita a soma.
+ * @param {number} num até qual número sera feita a soma.
  * @returns soma dos números primos menor ou igual a num.
  */
 function sumPrimes(num) {
@@ -20,6 +20,10 @@ function sumPrimes(num) {
   }
   return soma;
 }
+
+/* ==================================================
+                    Outras soluções
+   ================================================== */
 
 //christiandbf
 function checkPrime_Christiandbf(number) {
