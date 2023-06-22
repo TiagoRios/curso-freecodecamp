@@ -7,8 +7,9 @@
 JEST
 
 # Para praticar código.
-* [Edabit](https://edabit.com/challenges/javascript) - Resolver desafios em Javascript
-* [freecodecamp](https://www.freecodecamp.org/) - aprender Dois cursos sobre JS. maioria sobre Java.
+* [Edabit](https://edabit.com/challenges/javascript) - Resolver desafios em Javascript.
+* [EXLskills](https://exlskills.com/learn-en/courses/) - Dois cursos sobre JS. maioria sobre Java.
+* [codewars](https://www.codewars.com/) - Desafios de códigos em várias linguagens.
 * [codecademy](https://www.codecademy.com/courses/introduction-to-javascript/) - Tem que seguir exatamente o que pede - Sem liberdade para criatividade.
 
 # Observações
