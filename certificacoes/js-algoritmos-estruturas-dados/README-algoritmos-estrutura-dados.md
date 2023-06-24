@@ -11,3 +11,27 @@ Estudos sobre programação em javascript.
 
 # Observações
 * Caso outra biblioteca de teste - descritas no README próprio.  
+
+# Configuração para utilizar ES6 modules com JEST/TEST.
+export {a}; / import {a} from 'path/arq.js';
+
+npm install --save-dev babel-jest
+
+package.json:
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  }
+}
+
+npm install @babel/preset-env --save-dev
+
+arquivo na raiz -> .babelrc:
+{
+  "presets": ["@babel/preset-env"]
+}
