@@ -22,8 +22,9 @@
 15 - dropElements.js
 
 # Parte4
-16 - 
-17 - 
-18 - 
-19 - 
-20 - 
+16 - steamrollArray
+17 - binaryAgent
+18 - truthCheck
+19 - addTogether
+20 - person
+21 - orbitalPeriod
