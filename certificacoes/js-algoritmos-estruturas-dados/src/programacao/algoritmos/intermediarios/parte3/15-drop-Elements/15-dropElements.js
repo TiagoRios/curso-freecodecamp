@@ -16,8 +16,6 @@ function dropElements(arr, func) {
   return [];
 }
 
-console.log(dropElements([1, 2, 3,2,1], function (n) { return n >= 3; }));
-
 module.exports = {
   dropElements
 }
