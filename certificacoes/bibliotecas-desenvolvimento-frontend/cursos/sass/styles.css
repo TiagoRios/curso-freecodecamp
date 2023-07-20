@@ -1,0 +1,84 @@
+/* ANINHAMENTO*/
+ul {
+  list-style: none;
+}
+ul li {
+  color: red;
+  display: inline-block;
+}
+
+/* @EXTEND */
+.info, .info-importante {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.info-importante {
+  color: red;
+}
+
+/* MIXIN */
+.usando-mixin {
+  -ms-box-shadow: 0px 0px 4px #fff;
+  box-shadow: 0px 0px 4px #fff;
+}
+
+.usando-mixin-com-if-else {
+  color: yellow;
+}
+
+/* @EACH */
+.blue-text {
+  color: blue;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
+
+/* @WHILE */
+.col-1 {
+  width: 33.3333333333%;
+}
+
+.col-2 {
+  width: 66.6666666667%;
+}
+
+.col-3 {
+  width: 100%;
+}
+
+/* @FOR from TO */
+.col-1 {
+  width: 33.3333333333%;
+}
+
+.col-2 {
+  width: 66.6666666667%;
+}
+
+.col-3 {
+  width: 100%;
+}
+
+/* @FOR from THROUGH */
+.col-1 {
+  width: 25%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 75%;
+}
+
+.col-4 {
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,83 @@
+@import 'parcial-mixin'; // Somente com Dart sass.
+@import 'parcial-if-else'; // Ambos aceitam assim.
+
+$var-color: red;
+
+/* ANINHAMENTO*/
+ul {
+    list-style: none;
+
+    li {
+        color: $var-color;
+        display: inline-block;
+    }
+}
+
+/* @EXTEND */
+.info {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+// Somente transformado em css se for utilizado.
+%pode-ser-extendido {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.info-importante {
+    @extend .info;
+    color: $var-color;
+}
+
+/* MIXIN */
+.usando-mixin{
+    @include box-shadow(0px, 0px, 4px, #fff);
+}
+
+.usando-mixin-com-if-else {
+    @include text-effect(alert);
+}
+
+$colors: (
+    color1: blue,
+    color2: red,
+    color3: green
+);
+
+/* @EACH */
+@each $key,
+$color in $colors {
+    .#{$color}-text {
+        color: $color;
+    }
+}
+
+/* @WHILE */
+$x: 1;
+
+@while $x < 4 {
+    .col-#{$x} {
+        width: 100%/3 * $x;
+    }
+
+    $x: $x + 1;
+}
+
+/* @FOR from TO */
+@for $i from 1 to 4 {
+
+    // Não inclui o último
+    .col-#{$i} {
+        width: 100%/3 * $i;
+    }
+}
+
+/* @FOR from THROUGH */
+@for $i from 1 through 4 {
+
+    // inclui o último
+    .col-#{$i} {
+        width: 100%/4 * $i;
+    }
+}
