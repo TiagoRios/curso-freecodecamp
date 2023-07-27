@@ -1,4 +1,6 @@
-# Algoritmos e estruturas de dados em JavaScript
+<h1 align="center" style="color:blue">
+Algoritmos e estruturas de dados em JavaScript    
+</h1>
 
 Enquanto o HTML e o CSS controlam o conteúdo e o estilo de uma página, o JavaScript é usado para torná-lo interativo. Na certificação de Algoritmos e Estruturas de Dados em JavaScript, você aprenderá os fundamentos do JavaScript, incluindo variáveis, arrays, objetos, laços e funções.
 
@@ -6,16 +8,21 @@ Assim que souber os fundamentos abaixo, você aplicará esse conhecimento, crian
 
 Durante o processo, você também aprenderá dois estilos ou paradigmas de programação importantes: a Programação Orientada a Objetos (POO) e a Programação Funcional (PF).
 
-# Configuração para utilizar ES6 modules com JEST/TEST.
+## Configuração para utilizar ES6 modules com JEST/TEST.
 
-export moduloNormal;
-export default meuModulo;
-import meuModulo { moduloNormal } from 'path/arq.js';
+### Import/Export: 
+![Alt text](imagens-codesnap/code-modules-ES6.png)
 
-npm install --save-dev babel-jest
+Instale o babel:
 
-package.json:
-{
+##
+    npm install --save-dev babel-jest
+
+Altere o package.json:
+
+### package.json
+
+<pre> {
   "scripts": {
     "test": "jest"
   },
@@ -25,10 +32,18 @@ package.json:
     }
   }
 }
+</pre>
 
-npm install @babel/preset-env --save-dev
+Instale as pre-configurações do babel:
+###
+    npm install @babel/preset-env --save-dev
 
-arquivo na raiz crie o arquivo: ".babelrc" com:
-{
-  "presets": ["@babel/preset-env"]
-}
+Crie o arquivo: ".babelrc" na raiz do projeto:
+
+### .babelrc
+
+<pre>
+  {
+    "presets": ["@babel/preset-env"]
+  }
+</pre>
