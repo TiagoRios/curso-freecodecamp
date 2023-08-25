@@ -23,6 +23,7 @@ const handleAsync = () => {
         // dentro dessa função pode despachar ações e fazer requisições assíncronas.
 
         dispatch(requestingData());
+        // dispatch({ type: REQUESTING_DATA });
 
         setTimeout(function () {
             let data = {
@@ -30,6 +31,7 @@ const handleAsync = () => {
             }
 
             dispatch(receivedData(data))
+            // dispatch({ type: RECEIVED_DATA, users: data.users })
 
         }, 2500);
     }
@@ -37,7 +39,7 @@ const handleAsync = () => {
 
 const defaultState = {
     fetching: false,
-    users: ["algo","outro"]
+    users: ["algo", "outro"]
 };
 
 const asyncDataReducer = (state = defaultState, action) => {
@@ -59,7 +61,11 @@ const asyncDataReducer = (state = defaultState, action) => {
 
 const store = createStore(
     asyncDataReducer,
-    Redux.applyMiddleware(ReduxThunk.default)
+    Redux.applyMiddleware(ReduxThunk.default) // D'onde vem esse default?
+    // Redux.applyMiddleware() // sem argumento também funciona
+    
+    // Redux.applyMiddleware(ReduxThunk.algoAleatorio) // NÃO funciona
+    // Redux.applyMiddleware(ReduxThunk) // NÃO funciona
 );
 
 console.log("dados iniciais:", store.getState());
