@@ -4,7 +4,7 @@ import { legacy_createStore as createStore } from 'redux'
 const immutableReducer = (state = [0, 1, 2, 3, 4, 5], action) => {
     switch (action.type) {
         case 'REMOVE_ITEM':
-            return state.filter((x, i) => i !== action.index)
+            return state.filter((x, index) => index !== action.index)
         default:
             return state;
     }
@@ -19,6 +19,8 @@ const removeItem = (index) => {
 
 const store = createStore(immutableReducer);
 
+console.log("Antess:", store.getState());
+
 store.dispatch(removeItem(3))
 
-console.log(store.getState());
+console.log("Depois:", store.getState());

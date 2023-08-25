@@ -11,7 +11,6 @@ const defaultState = {
 const immutableReducer = (state = defaultState, action) => {
     switch (action.type) {
         case 'ONLINE':
-            // Não mude o estado aqui ou os testes vão falhar
             return { ...Object.assign({}, state), status: "online" }
         default:
             return state;
@@ -26,6 +25,10 @@ const wakeUp = () => {
 
 const store = createStore(immutableReducer);
 
+console.log("Antes: status =", store.getState().status)
+console.log("Antes:", store.getState())
+
 store.dispatch(wakeUp())
 
-console.log(store.getState())
+console.log("Depois: status =", store.getState().status)
+console.log("Depois:", store.getState())

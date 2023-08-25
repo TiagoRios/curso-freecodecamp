@@ -22,7 +22,7 @@ const handleAsync = () => {
     return function (dispatch) {
         // dentro dessa função pode despachar ações e fazer requisições assíncronas.
 
-        dispatch(requestingData);
+        dispatch(requestingData());
 
         setTimeout(function () {
             let data = {
@@ -57,18 +57,18 @@ const asyncDataReducer = (state = defaultState, action) => {
     }
 };
 
-const store = Redux.createStore(
+const store = createStore(
     asyncDataReducer,
     Redux.applyMiddleware(ReduxThunk.default)
 );
 
-handleAsync()(store.dispatch);
-
 console.log("dados iniciais:", store.getState());
 
+handleAsync()(store.dispatch);
+
 setTimeout(() => {
-    console.log("Após 2 segundos:", store.getState());
+    console.log("Após 2 segundos:", store.getState(), " >>> buscando");
 }, 2000);
 setTimeout(() => {
-    console.log("Após 3 segundos:", store.getState());
+    console.log("Após 3 segundos:", store.getState(), " >>> encontrado");
 }, 3000);

@@ -45,3 +45,10 @@ const rootReducer = Redux.combineReducers({
 const store = createStore(rootReducer);
 
 console.log(store.getState());
+store.dispatch({type:LOGIN})
+store.dispatch({type:INCREMENT})
+store.dispatch({type:INCREMENT})
+console.log(store.getState());
+store.dispatch({type:LOGOUT})
+store.dispatch({type:DECREMENT})
+console.log(store.getState());

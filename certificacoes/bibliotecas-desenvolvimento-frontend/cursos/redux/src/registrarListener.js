@@ -23,8 +23,11 @@ store.subscribe(() => count += 1)
 
 // dispacha eventos de ação
 store.dispatch({ type: ADD });
-console.log(count);
+console.log("count:", count);
+console.log("state:", store.getState());
 store.dispatch({ type: ADD });
-console.log(count);
+console.log("count:", count);
+console.log("state:", store.getState());
 store.dispatch({ type: ADD });
-console.log(count);
+console.log("count:", count);
+console.log("state:", store.getState());

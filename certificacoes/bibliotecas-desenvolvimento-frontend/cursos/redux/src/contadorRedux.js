@@ -27,7 +27,7 @@ const decAction = () => {
     }
 };
 
-const store = Redux.createStore(counterReducer)
+const store = createStore(counterReducer)
 
 console.log("inicial: ", store.getState());
 store.dispatch(incAction());

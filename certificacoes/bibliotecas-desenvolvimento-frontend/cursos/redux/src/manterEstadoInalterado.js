@@ -13,8 +13,6 @@ const todos = [
 const immutableReducer = (state = todos, action) => {
     switch (action.type) {
         case ADD_TO_DO:
-            // Não mude o estado aqui ou os testes vão falhar
-            // usei desestruturação 
             return [...state, action.todo]
         default:
             return state;
@@ -31,5 +29,7 @@ const addToDo = (todo) => {
 const store = createStore(immutableReducer);
 
 store.dispatch(addToDo("banhar o cão"))
+store.dispatch(addToDo("fazer café"))
+store.dispatch(addToDo("fazer próximo tópico do exercício"))
 
 console.log(store.getState());
