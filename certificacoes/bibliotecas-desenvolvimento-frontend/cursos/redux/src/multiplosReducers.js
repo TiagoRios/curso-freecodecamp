@@ -1,5 +1,5 @@
 // recomenda-se o RTK. createStore() foi substituído por configureStore()
-import Redux, { legacy_createStore as createStore} from 'redux'
+import Redux, { legacy_createStore as createStore } from 'redux';
 
 // eles poderiam estar em arquivos separados.
 
@@ -8,7 +8,7 @@ const DECREMENT = 'DECREMENT';
 
 // reducer 1
 const counterReducer = (state = 0, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case INCREMENT:
       return state + 1;
     case DECREMENT:
@@ -22,8 +22,8 @@ const LOGIN = 'LOGIN';
 const LOGOUT = 'LOGOUT';
 
 // reducer 2
-const authReducer = (state = {authenticated: false}, action) => {
-  switch(action.type) {
+const authReducer = (state = { authenticated: false }, action) => {
+  switch (action.type) {
     case LOGIN:
       return {
         authenticated: true
@@ -38,17 +38,21 @@ const authReducer = (state = {authenticated: false}, action) => {
 };
 
 const rootReducer = Redux.combineReducers({
-    auth: authReducer,
-    count: counterReducer
+  auth: authReducer,
+  count: counterReducer
 })
 
 const store = createStore(rootReducer);
 
 console.log(store.getState());
-store.dispatch({type:LOGIN})
-store.dispatch({type:INCREMENT})
-store.dispatch({type:INCREMENT})
+
+store.dispatch({ type: LOGIN })
+store.dispatch({ type: INCREMENT })
+store.dispatch({ type: INCREMENT })
+
 console.log(store.getState());
-store.dispatch({type:LOGOUT})
-store.dispatch({type:DECREMENT})
+
+store.dispatch({ type: LOGOUT })
+store.dispatch({ type: DECREMENT })
+
 console.log(store.getState());
