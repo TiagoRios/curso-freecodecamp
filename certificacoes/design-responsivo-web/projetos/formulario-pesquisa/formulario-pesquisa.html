@@ -19,73 +19,110 @@
     <main>
       <form class="survey-form" id="survey-form">
 
-        <label id="name-label" for="name"><span class="cor-vermelha">*</span>Name <input
-            class="input-width input-height" id="name" type="text" placeholder="Insira seu nome"
-            title="prencha com o nome" required min="3" max="15" autofocus /></label>
+        <div class="informacoes-pessoais">
+          <label id="name-label" for="name">
+            <span class="cor-vermelha">*</span>Name
 
-        <label id="last-name-label" for="last-name"><span class="cor-vermelha">*</span>Sobrenome <input
-            class="input-width input-height" id="last-name" type="text" placeholder="Insira seu sobrenome"
-            title="prencha com o sobrenome" required max="50" /></label>
+            <input class="input-width input-height" id="name" type="text" placeholder="Insira seu nome"
+              title="prencha com o nome" required min="3" max="15" autofocus />
+          </label>
 
-        <label id="email-label" for="email"><span class="cor-vermelha">*</span>Email <input
-            class="input-width input-height" id="email" type="email" placeholder="Insira seu email"
-            title="prencha com um email válido" required /></label>
+          <label id="last-name-label" for="last-name">
+            <span class="cor-vermelha">*</span>Sobrenome
 
-        <label id="number-label" for="number"><span class="cor-vermelha">*</span>Idade <input
-            class="input-width input-height" id="number" type="number" placeholder="insira idade"
-            title="prencha a com idade" required pattern="[0-9]" min="16" max="120" /></label>
+            <input class="input-width input-height" id="last-name" type="text" placeholder="Insira seu sobrenome"
+              title="prencha com o sobrenome" required max="50" />
+          </label>
 
-        <label class="label-margin-bottom-top input-width">Possui filhos? <select class="input-width input-height"
-            id="dropdown">
-            <option value="">(escolha uma opção)</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </label>
+          <label id="email-label" for="email">
+            <span class="cor-vermelha">*</span>Email
 
-        <!-- Escolaridade -->
-        <label class="label-margin-bottom-top">Qual seu nível escolaridade?</label><br>
-        <label>
-          <input class="item" name="escolaridade" type="radio" id="nao-alfabetizado" value="nao-alfabetizado" /> Não
-          alfabetizado(a)
-        </label><br>
-        <input name="escolaridade" type="radio" id="fundamental" value="fundamental" /> Ensino fundamental completo
-        </label><br>
-        <input name="escolaridade" type="radio" id="medio" value="medio" /> Ensino médio completo
-        </label><br>
-        <label>
-          <input name="escolaridade" value="superior-incompleto" type="radio" id="superior-incompleto" /> Superior
-          incompleto/cursando
-        </label><br>
-        <label>
-          <input name="escolaridade" value="superior-completo" type="radio" id="superior-completo" /> Superior completo
-        </label><br>
+            <input class="input-width input-height" id="email" type="email" placeholder="Insira seu email"
+              title="prencha com um email válido" required />
+          </label>
 
-        <!-- Hobby-form -->
-        <label class="label-margin-bottom-top">Quais seus hobbys?:</label><br>
-        <label>
-          <input type="checkbox" id="livros" value="livros" /> Livros
-        </label><br>
-        <label>
-          <input type="checkbox" id="games" value="games" /> Games
-        </label><br>
-        <label>
-          <input type="checkbox" id="musica" value="musica" /> Música
-        </label><br>
-        <label>
-          <input type="checkbox" id="comer" value="comer" /> Comer
-        </label><br>
-        <label>
-          <input type="checkbox" id="musculacao" value="musculacao" /> Musculação
-        </label><br>
+          <label id="number-label" for="number">
+            <span class="cor-vermelha">*</span>Idade
 
+            <input class="input-width input-height" id="number" type="number" placeholder="Insira sua idade"
+              title="prencha a com idade" required pattern="[0-9]" min="16" max="120" />
+          </label>
 
+          <label class="label-margin-bottom-top input-width">
+            Possui filhos?
 
-        <!-- Observações-form -->
-        <label class="label-margin-bottom-top input-width" for="area"> Obs:
-          <textarea class="input-width" id="area" rows=4 placeholder="Algo a mais ?"></textarea>
-        </label>
-        <button class="input-width input-height" id="submit" type="submit">Enviar</button>
+            <select class="input-width input-height" id="dropdown">
+              <option value="">(escolha uma opção)</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="escolaridade">
+          <label class="label-margin-bottom-top">Qual seu nível escolaridade?</label><br>
+
+          <label>
+            <input class="item" name="escolaridade" type="radio" id="nao-alfabetizado" value="nao-alfabetizado" />
+            Não alfabetizado(a)
+          </label><br>
+
+          <label>
+            <input name="escolaridade" type="radio" id="fundamental" value="fundamental" />
+            Ensino fundamental completo
+          </label><br>
+
+          <label>
+            <input name="escolaridade" type="radio" id="medio" value="medio" />
+            Ensino médio completo
+          </label><br>
+
+          <label>
+            <input name="escolaridade" value="superior-incompleto" type="radio" id="superior-incompleto" />
+            Superior incompleto/cursando
+          </label><br>
+
+          <label>
+            <input name="escolaridade" value="superior-completo" type="radio" id="superior-completo" />
+            Superior completo
+          </label><br>
+
+        </div>
+
+        <div class="hobby">
+          <label class="label-margin-bottom-top">Quais seus hobbys?:</label><br>
+
+          <label>
+            <input type="checkbox" id="livros" value="livros" /> Livros
+          </label><br>
+
+          <label>
+            <input type="checkbox" id="games" value="games" /> Games
+          </label><br>
+
+          <label>
+            <input type="checkbox" id="musica" value="musica" /> Música
+          </label><br>
+
+          <label>
+            <input type="checkbox" id="comer" value="comer" /> Comer
+          </label><br>
+
+          <label>
+            <input type="checkbox" id="musculacao" value="musculacao" /> Musculação
+          </label><br>
+        </div>
+
+        <div class="observacoes">
+          <label class="label-margin-bottom-top input-width" for="area">
+            Obs:
+            <textarea class="input-width" id="area" rows=4 placeholder="Algo a mais ?"></textarea>
+          </label>
+        </div>
+
+        <button class="input-width input-height" id="submit" type="submit">
+          Enviar formulário
+        </button>
 
       </form>
     </main>
