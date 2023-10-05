@@ -1,5 +1,5 @@
 // recomenda-se o RTK. createStore() foi substituído por configureStore()
-import Redux, { legacy_createStore as createStore} from 'redux'
+import Redux, { legacy_createStore as createStore } from 'redux'
 
 const ADD = 'ADD';
 
@@ -25,9 +25,11 @@ store.subscribe(() => count += 1)
 store.dispatch({ type: ADD });
 console.log("count:", count);
 console.log("state:", store.getState());
+
 store.dispatch({ type: ADD });
 console.log("count:", count);
 console.log("state:", store.getState());
+
 store.dispatch({ type: ADD });
 console.log("count:", count);
 console.log("state:", store.getState());

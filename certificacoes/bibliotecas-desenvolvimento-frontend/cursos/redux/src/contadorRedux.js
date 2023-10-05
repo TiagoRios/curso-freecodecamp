@@ -30,9 +30,12 @@ const decAction = () => {
 const store = createStore(counterReducer)
 
 console.log("inicial: ", store.getState());
+
 store.dispatch(incAction());
 console.log("incr: ", store.getState());
+
 store.dispatch(decAction());
 console.log("decr: ", store.getState());
+
 store.dispatch(decAction());
 console.log("decr: ", store.getState());

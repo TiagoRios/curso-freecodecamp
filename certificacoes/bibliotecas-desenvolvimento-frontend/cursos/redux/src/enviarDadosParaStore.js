@@ -23,7 +23,9 @@ const addNoteText = (note) => {
 const store = createStore(notesReducer);
 
 console.log(store.getState());
+
 store.dispatch(addNoteText('Hello!'));
 console.log(store.getState());
+
 store.dispatch(addNoteText('Outro valor'));
 console.log(store.getState());
