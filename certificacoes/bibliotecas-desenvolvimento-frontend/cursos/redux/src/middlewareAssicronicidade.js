@@ -10,14 +10,15 @@ const requestingData = () => {
         type: REQUESTING_DATA
     }
 }
+
 const receivedData = (data) => {
     return {
         type: RECEIVED_DATA, users: data.users
     }
 }
 
-// Para criar uma função assíncrona retorne uma função no criador de ação
-// a função recebe dispatch como argumento.
+// Para criar uma função assíncrona retorne uma função no criador de ação.
+// A função recebe dispatch como argumento.
 const handleAsync = () => {
     return function (dispatch) {
         // dentro dessa função pode despachar ações e fazer requisições assíncronas.
@@ -63,7 +64,7 @@ const store = createStore(
     asyncDataReducer,
     Redux.applyMiddleware(ReduxThunk.default) // D'onde vem esse default?
     // Redux.applyMiddleware() // sem argumento também funciona
-    
+
     // Redux.applyMiddleware(ReduxThunk.algoAleatorio) // NÃO funciona
     // Redux.applyMiddleware(ReduxThunk) // NÃO funciona
 );
@@ -75,6 +76,7 @@ handleAsync()(store.dispatch);
 setTimeout(() => {
     console.log("Após 2 segundos:", store.getState(), " >>> buscando");
 }, 2000);
+
 setTimeout(() => {
     console.log("Após 3 segundos:", store.getState(), " >>> encontrado");
 }, 3000);
